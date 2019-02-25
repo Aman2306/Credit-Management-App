@@ -13,6 +13,11 @@
 		A62CAE7B2223CE4000E8B270 /* Credit_Management_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A62CAE792223CE4000E8B270 /* Credit_Management_App.xcdatamodeld */; };
 		A62CAE7D2223CE4000E8B270 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A62CAE7C2223CE4000E8B270 /* Assets.xcassets */; };
 		A62CAE802223CE4000E8B270 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A62CAE7E2223CE4000E8B270 /* LaunchScreen.storyboard */; };
+		A62CAE882223DB2500E8B270 /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62CAE872223DB2500E8B270 /* AddUserViewController.swift */; };
+		A62CAE8A2223DB3500E8B270 /* TransferCreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62CAE892223DB3500E8B270 /* TransferCreditsViewController.swift */; };
+		A62CAE8C2223DB5D00E8B270 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62CAE8B2223DB5D00E8B270 /* UserTableViewCell.swift */; };
+		A62CAE8F222447E200E8B270 /* TransferCreditsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62CAE8E222447E200E8B270 /* TransferCreditsTableViewCell.swift */; };
+		A62CAE91222459F100E8B270 /* ShowAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62CAE90222459F100E8B270 /* ShowAlert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		A62CAE7C2223CE4000E8B270 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A62CAE7F2223CE4000E8B270 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A62CAE812223CE4000E8B270 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A62CAE872223DB2500E8B270 /* AddUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
+		A62CAE892223DB3500E8B270 /* TransferCreditsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferCreditsViewController.swift; sourceTree = "<group>"; };
+		A62CAE8B2223DB5D00E8B270 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		A62CAE8E222447E200E8B270 /* TransferCreditsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferCreditsTableViewCell.swift; sourceTree = "<group>"; };
+		A62CAE90222459F100E8B270 /* ShowAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAlert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +66,8 @@
 		A62CAE712223CE4000E8B270 /* Credit Management App */ = {
 			isa = PBXGroup;
 			children = (
+				A62CAE8D2223DBA100E8B270 /* Controller */,
 				A62CAE722223CE4000E8B270 /* AppDelegate.swift */,
-				A62CAE742223CE4000E8B270 /* ViewController.swift */,
 				A62CAE762223CE4000E8B270 /* Main.storyboard */,
 				A62CAE7C2223CE4000E8B270 /* Assets.xcassets */,
 				A62CAE7E2223CE4000E8B270 /* LaunchScreen.storyboard */,
@@ -65,6 +75,19 @@
 				A62CAE792223CE4000E8B270 /* Credit_Management_App.xcdatamodeld */,
 			);
 			path = "Credit Management App";
+			sourceTree = "<group>";
+		};
+		A62CAE8D2223DBA100E8B270 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A62CAE742223CE4000E8B270 /* ViewController.swift */,
+				A62CAE872223DB2500E8B270 /* AddUserViewController.swift */,
+				A62CAE892223DB3500E8B270 /* TransferCreditsViewController.swift */,
+				A62CAE8E222447E200E8B270 /* TransferCreditsTableViewCell.swift */,
+				A62CAE8B2223DB5D00E8B270 /* UserTableViewCell.swift */,
+				A62CAE90222459F100E8B270 /* ShowAlert.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +162,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A62CAE752223CE4000E8B270 /* ViewController.swift in Sources */,
+				A62CAE882223DB2500E8B270 /* AddUserViewController.swift in Sources */,
 				A62CAE732223CE4000E8B270 /* AppDelegate.swift in Sources */,
+				A62CAE91222459F100E8B270 /* ShowAlert.swift in Sources */,
+				A62CAE8F222447E200E8B270 /* TransferCreditsTableViewCell.swift in Sources */,
 				A62CAE7B2223CE4000E8B270 /* Credit_Management_App.xcdatamodeld in Sources */,
+				A62CAE8C2223DB5D00E8B270 /* UserTableViewCell.swift in Sources */,
+				A62CAE8A2223DB3500E8B270 /* TransferCreditsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
