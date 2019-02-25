@@ -75,6 +75,20 @@ class TransferCreditsViewController: UIViewController {
     }
     
     func checkValues(senderIndex: Int, receiverIndex: Int) -> Bool {
+        if (usersArray[senderIndex].userName == usersArray[receiverIndex].userName) {
+            showAlert(title: "Same user", message: "Please select different user")
+            return false
+        } else if (Int32(creditsToTranferTextField.text!) == nil) {
+            showAlert(title: "Invalid Input", message: "Please check your input and try again.")
+            return false
+        } else if (usersArray[senderIndex].userCredits < Int32(creditsToTranferTextField.text!)!) {
+            showAlert(title: "Not enough credits", message: "Sender does not have enough credits to make this transition.")
+            return false
+        } else if !(Int32(creditsToTranferTextField.text!)! > 1) {
+            showAlert(title: "Invalid input", message: "Please fill valid crdit value")
+        } else {
+            return true
+        }
         return true
     }
 }

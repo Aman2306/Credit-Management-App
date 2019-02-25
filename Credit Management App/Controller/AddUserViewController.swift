@@ -28,23 +28,30 @@ class AddUserViewController: UIViewController {
         super.viewDidLoad()
     }
     @IBAction func createUserTapped(_ sender: Any) {
-        saveTask { (done) in
-            if done {
-                navigationController?.popViewController(animated: true)
-                self.dismiss(animated: true, completion: nil)
+        if checkValues(name: nameOutlet.text, email: emailOutlet.text, credits: creditsOutlet.text) {
+            saveTask { (done) in
+                if done {
+                    navigationController?.popViewController(animated: true)
+                    self.dismiss(animated: true, completion: nil)
+                }
             }
         }
     }
     
-    func checkValues(name: String, email: String, credits: String) -> Bool {
-        if (name == "" || email == "" || credits == "") {
-            //TODO: ALERT TO PUT HERE
+    // Functions
+    func checkValues(name: String?, email: String?, credits: String?) -> Bool {
+        if (nameOutlet.text == nil || emailOutlet.text == nil || Int32(creditsOutlet.text!) == nil) {
+            showAlert(title: "Error", message: "Please fill all the fields correctly")
             return false
-        } else if (name.count < 3) {
-            //TODO: ALERT TO PUT HERE
+        }
+        else if (name == "" || email == "" || credits == "") {
+            showAlert(title: "Missing Values", message: "Please fill all the fields.")
             return false
-        } else if Int32(credits) == nil {
-            //TODO: ALERT TO PUT HERE
+        } else if (name!.count < 3) {
+            showAlert(title: "Name too short", message: "Length of user name should be more than 3 characters.")
+            return false
+        } else if Int32(credits!) == nil {
+            showAlert(title: "Invalid Input", message: "Please check credit value and try again.")
             return false
         }
         return true

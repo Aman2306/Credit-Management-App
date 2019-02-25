@@ -41,6 +41,7 @@ class ViewController: UIViewController {
         userTableView.reloadData()
     }
     
+    // Functions
     func callDelegates() {
         userTableView.delegate = self
         userTableView.dataSource = self
